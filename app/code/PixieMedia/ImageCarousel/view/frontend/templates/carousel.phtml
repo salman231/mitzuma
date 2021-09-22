@@ -1,0 +1,89 @@
+<?php
+/**
+ * Template for displaying Pixie Media Image Carousel
+ *
+ */
+?>
+<?php 
+$groupid = $block->getData('groupid');
+$group = $block->getGroup($groupid);
+if($groupid) { 
+	$images = $block->carouselimages($groupid); 
+	if($images) {
+	?>
+		<div class="block widget pm-widget-wrap block-products-list">
+			
+			<?php 
+			$title = $group->getLabel();
+			if(!$title) { $title = 'Image Carousel'; } 
+			?>
+			<?php $styled_name = strtolower(str_replace(array(' ',',','&','&amp;'),'',$title)); ?>
+			<div class="feat-line">
+			<div class="feat-white">
+				<span class="pm-prev cat-prev cat-prev-<?php echo $styled_name; ?>"></span>
+				<span class="title"><?php echo $title; ?></span>
+				<span class="pm-next cat-next cat-next-<?php echo $styled_name; ?>"></span>
+			</div>
+			</div>
+	  
+			<div class="block-content pm-brands pm-ident-<?php echo $styled_name; ?>">
+			
+			<?php foreach($images as $image) {
+				echo '<a href="'.$image->getLink().'" title="'.$image->getName().'">';
+				echo '<div class="brand-block">';
+				if($image->getImage()) {
+				echo '<img src="'.$block->resize($image->getImage(),$group->getImagewidth(),$group->getImageheight()).'" alt="'.$image->getName().'" />';
+				}
+				echo '</div>';
+				echo '</a>';
+			} ?>
+			</div>
+		</div>
+	
+	<script type="text/javascript">
+		require(['jquery','slick'],function($){
+			$(".pm-ident-<?php echo $styled_name; ?>").slick({
+			  infinite: <?php if($group->getInfinite()) { echo 'true'; } else { echo 'false'; } ?>,
+			  speed: 300,
+			  slidesToShow: <?php echo $group->getSlidestoshow(); ?>,
+			  slidesToScroll: <?php echo $group->getSlidestoscroll(); ?>,
+			  nextArrow: '.cat-next-<?php echo $styled_name; ?>',
+			  prevArrow: '.cat-prev-<?php echo $styled_name; ?>',
+			  responsive: [
+				{
+				  breakpoint: <?php echo $group->getBreakpointone(); ?>,
+				  settings: {
+					slidesToShow: <?php echo $group->getResoneslidestoshow(); ?>,
+					slidesToScroll: <?php echo $group->getResoneslidestoscroll(); ?>,
+					
+				  }
+				},
+				{
+				  breakpoint: <?php echo $group->getBreakpointtwo(); ?>,
+				  settings: {
+					slidesToShow: <?php echo $group->getRestwoslidestoshow(); ?>,
+					slidesToScroll: <?php echo $group->getRestwoslidestoscroll(); ?>,
+					
+				  }
+				},
+				{
+				  breakpoint: <?php echo $group->getBreakpointthree(); ?>,
+				  settings: {
+					slidesToShow: <?php echo $group->getResthreeslidestoshow(); ?>,
+					slidesToScroll: <?php echo $group->getResthreeslidestoscroll(); ?>,
+					
+				  }
+				}
+			   
+			  ]
+			  
+			});
+		 });
+	</script>
+    <?php } else { ?>
+    <p>No carousel images found for group id <?php echo $groupid; ?></p>
+    <?php } ?>
+
+<?php } else { ?>
+<p>No carousel group id assigned</p>
+<?php } ?>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Mageside. All rights reserved.
+ * See MS-LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mageside_shippingmatrixrates>
+            <general>
+                <module_name>Shipping Matrix Rates</module_name>
+                <module_page_link>https://mageside.com/shipping-matrix-rates-2.html</module_page_link>
+            </general>
+        </mageside_shippingmatrixrates>
+        <carriers>
+            <matrixrates>
+                <active>0</active>
+                <sallowspecific>0</sallowspecific>
+                <condition_name>per_group</condition_name>
+                <include_virtual_price>1</include_virtual_price>
+                <use_base_price>1</use_base_price>
+                <use_tax_price>1</use_tax_price>
+                <use_discount>1</use_discount>
+                <csv_delimiter>,</csv_delimiter>
+                <zip_from_range>0</zip_from_range>
+                <zip_code_max_length>0</zip_code_max_length>
+                <from_filter_operator>gt</from_filter_operator>
+                <to_filter_operator>lteq</to_filter_operator>
+                <model>Mageside\ShippingMatrixRates\Model\Carrier\Matrixrates</model>
+                <name>Shipping Matrix Rates</name>
+                <title>Select Shipping Option</title>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+                <handling_type>F</handling_type>
+            </matrixrates>
+        </carriers>
+    </default>
+</config>

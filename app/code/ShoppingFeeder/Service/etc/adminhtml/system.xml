@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+    <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+        <system>
+            <section id="shoppingfeeder" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                <class>separator-top</class>
+                <label>ShoppingFeeder</label>
+                <tab>catalog</tab>
+                <resource>ShoppingFeeder_Service::shoppingfeeder_configuration</resource>
+                <group id="service" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ShoppingFeeder</label>
+                    <field id="apikey" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Api Key</label>
+                        <comment>Add Api Key above (required)</comment>
+                    </field>
+                    <field id="apisecret" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Api Secret</label>
+                        <comment>Add Api Secret above (required)</comment>
+                    </field>
+                </group>
+            </section>
+        </system>
+    </config>

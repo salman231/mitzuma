@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * PixieMedia_ImageCarousel extension
+ *                     NOTICE OF LICENSE
+ * 
+ *                     This source file is subject to the MIT License
+ *                     that is bundled with this package in the file LICENSE.txt.
+ *                     It is also available through the world-wide-web at this URL:
+ *                     http://opensource.org/licenses/mit-license.php
+ * 
+ *                     @category  PixieMedia
+ *                     @package   PixieMedia_ImageCarousel
+ *                     @copyright Copyright (c) 2017
+ *                     @license   http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="PixieMedia_ImageCarousel::imagecarousel" title="Pixie Media" module="PixieMedia_ImageCarousel" sortOrder="66" resource="PixieMedia_ImageCarousel::imagecarousel" parent="Magento_Backend::content"/>
+        <add id="PixieMedia_ImageCarousel::cgroup" title="Carousel Groups" module="PixieMedia_ImageCarousel" sortOrder="20" action="pixiemedia_imagecarousel/cgroup" resource="PixieMedia_ImageCarousel::cgroup" parent="PixieMedia_ImageCarousel::imagecarousel"/>
+<add id="PixieMedia_ImageCarousel::cimage" title="Carousel Images" module="PixieMedia_ImageCarousel" sortOrder="21" action="pixiemedia_imagecarousel/cimage" resource="PixieMedia_ImageCarousel::cimage" parent="PixieMedia_ImageCarousel::imagecarousel"/>
+    </menu>
+</config>

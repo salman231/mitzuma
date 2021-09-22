@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * PixieMedia_ImageCarousel extension
+ *                     NOTICE OF LICENSE
+ * 
+ *                     This source file is subject to the MIT License
+ *                     that is bundled with this package in the file LICENSE.txt.
+ *                     It is also available through the world-wide-web at this URL:
+ *                     http://opensource.org/licenses/mit-license.php
+ * 
+ *                     @category  PixieMedia
+ *                     @package   PixieMedia_ImageCarousel
+ *                     @copyright Copyright (c) 2017
+ *                     @license   http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <virtualType name="PixieMediaImageCarouselGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="PixieMediaImageCarouselCimageGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">PixieMedia\ImageCarousel\Model\ResourceModel\Cimage\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">PixieMediaImageCarouselGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="PixieMediaImageCarouselCgroupGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">PixieMedia\ImageCarousel\Model\ResourceModel\Cgroup\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">PixieMediaImageCarouselGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <type name="PixieMedia\ImageCarousel\Model\ResourceModel\Cimage\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">pixiemedia_imagecarousel_cimage</argument>
+            <argument name="eventPrefix" xsi:type="string">pixiemedia_imagecarousel_cimage_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">cimage_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">PixieMedia\ImageCarousel\Model\ResourceModel\Cimage</argument>
+        </arguments>
+    </type>
+    <type name="PixieMedia\ImageCarousel\Model\ResourceModel\Cgroup\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">pixiemedia_imagecarousel_cgroup</argument>
+            <argument name="eventPrefix" xsi:type="string">pixiemedia_imagecarousel_cgroup_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">cgroup_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">PixieMedia\ImageCarousel\Model\ResourceModel\Cgroup</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="pixiemedia_imagecarousel_cimage_listing_data_source" xsi:type="string">PixieMedia\ImageCarousel\Model\ResourceModel\Cimage\Grid\Collection</item>
+                <item name="pixiemedia_imagecarousel_cgroup_listing_data_source" xsi:type="string">PixieMedia\ImageCarousel\Model\ResourceModel\Cgroup\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

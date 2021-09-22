@@ -1,0 +1,34 @@
+<?php
+/** @var $block \Mstore\PaymentResolver\Block\Display */
+?>
+<style>
+    <?php if ($block->getLang() == "ar"): ?>
+        .wpwl-wrapper-cardNumber,wpwl-group{
+            direction: ltr !important;
+        }
+    <?php endif; ?>
+
+    <?= $block->getCss(); ?>
+</style>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script>
+    jq331 = jQuery.noConflict( true );
+    var wpwlOptions = {
+        locale: "<?php echo $block->getLang();?>",
+        paymentTarget: "_top",
+        style: "<?php echo $block->getStyle();?>",
+        onReady: function(){
+            jq331('[name="form_key"]').remove();
+        }
+
+    };
+    wpwlOptions.applePay = {
+        merchantCapabilities:["supports3DS"],
+        supportedNetworks: ["amex", "masterCard", "visa", "mada"]
+    }
+</script>
+<script src="<?= $block->getFormUrl(); ?>"></script>
+<form action="<?= $block->getShopperUrl(); ?>" class="paymentWidgets" data-brands="<?= $block->getPaymentBrand(); ?>"></form>

@@ -1,0 +1,140 @@
+2020-08-03 20:36:18 : Payfast\Payfast\Controller\Redirect\Index::execute : bof
+2020-08-03 20:36:18 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : serverMode : test
+2020-08-03 20:36:18 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : pfOutput for signature is : merchant_id=10000100&merchant_key=46f0cd694581a&return_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fsuccess%2F&cancel_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fcancel%2F&notify_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fnotify%2F&name_first=Test&name_last=Purchase&email_address=info%40infinityoutdoors.co.za&m_payment_id=000000007&amount=715.00&item_name=English%2C+Order+%23000000007
+2020-08-03 20:36:18 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : data is :Array
+(
+    [merchant_id] => 10000100
+    [merchant_key] => 46f0cd694581a
+    [return_url] => https://www.mitzuma.co.za/payfast/redirect/success/
+    [cancel_url] => https://www.mitzuma.co.za/payfast/redirect/cancel/
+    [notify_url] => https://www.mitzuma.co.za/payfast/notify/
+    [name_first] => Test
+    [name_last] => Purchase
+    [email_address] => info@infinityoutdoors.co.za
+    [m_payment_id] => 000000007
+    [amount] => 715.00
+    [item_name] => English, Order #000000007
+    [signature] => 710214f818be0368afc785ee671c5a52
+    [user_agent] => Magento 2.3.5-p1
+)
+
+2020-08-03 21:20:39 : Payfast\Payfast\Controller\Redirect\Index::execute : bof
+2020-08-03 21:20:39 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : serverMode : test
+2020-08-03 21:20:39 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : pfOutput for signature is : merchant_id=10000100&merchant_key=46f0cd694581a&return_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fsuccess%2F&cancel_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fcancel%2F&notify_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fnotify%2F&amount=0.00&item_name=English%2C+Order+%23
+2020-08-03 21:20:40 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : data is :Array
+(
+    [merchant_id] => 10000100
+    [merchant_key] => 46f0cd694581a
+    [return_url] => https://www.mitzuma.co.za/payfast/redirect/success/
+    [cancel_url] => https://www.mitzuma.co.za/payfast/redirect/cancel/
+    [notify_url] => https://www.mitzuma.co.za/payfast/notify/
+    [name_first] => 
+    [name_last] => 
+    [email_address] => 
+    [m_payment_id] => 
+    [amount] => 0.00
+    [item_name] => English, Order #
+    [signature] => 57b2843554c3fb21f3882727d1484ead
+    [user_agent] => Magento 2.3.5-p1
+)
+
+2020-09-01 06:40:00 : Payfast\Payfast\Controller\Redirect\Index::execute : bof
+2020-09-01 06:40:00 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : serverMode : test
+2020-09-01 06:40:00 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : pfOutput for signature is : merchant_id=10000100&merchant_key=46f0cd694581a&return_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fsuccess%2F&cancel_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fcancel%2F&notify_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fnotify%2F&name_first=Mansi&name_last=Mansi&email_address=mansi%40dasinfomedia.com&m_payment_id=000000011&amount=544.00&item_name=English%2C+Order+%23000000011
+2020-09-01 06:40:01 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : data is :Array
+(
+    [merchant_id] => 10000100
+    [merchant_key] => 46f0cd694581a
+    [return_url] => https://www.mitzuma.co.za/payfast/redirect/success/
+    [cancel_url] => https://www.mitzuma.co.za/payfast/redirect/cancel/
+    [notify_url] => https://www.mitzuma.co.za/payfast/notify/
+    [name_first] => Mansi
+    [name_last] => Mansi
+    [email_address] => mansi@dasinfomedia.com
+    [m_payment_id] => 000000011
+    [amount] => 544.00
+    [item_name] => English, Order #000000011
+    [signature] => f6fd19b2b58f46ae764b769e39c4d64d
+    [user_agent] => Magento 2.3.5-p1
+)
+
+2020-09-01 06:57:42 : Payfast\Payfast\Controller\Redirect\Index::execute : bof
+2020-09-01 06:57:42 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : serverMode : test
+2020-09-01 06:57:42 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : pfOutput for signature is : merchant_id=10000100&merchant_key=46f0cd694581a&return_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fsuccess%2F&cancel_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fcancel%2F&notify_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fnotify%2F&name_first=Mansi&name_last=Mansi&email_address=mansi%40dasinfomedia.com&m_payment_id=000000012&amount=499.00&item_name=English%2C+Order+%23000000012
+2020-09-01 06:57:42 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : data is :Array
+(
+    [merchant_id] => 10000100
+    [merchant_key] => 46f0cd694581a
+    [return_url] => https://www.mitzuma.co.za/payfast/redirect/success/
+    [cancel_url] => https://www.mitzuma.co.za/payfast/redirect/cancel/
+    [notify_url] => https://www.mitzuma.co.za/payfast/notify/
+    [name_first] => Mansi
+    [name_last] => Mansi
+    [email_address] => mansi@dasinfomedia.com
+    [m_payment_id] => 000000012
+    [amount] => 499.00
+    [item_name] => English, Order #000000012
+    [signature] => 3aa3be7cfd7f5f7585dfb6beaa62ee99
+    [user_agent] => Magento 2.3.5-p1
+)
+
+2020-09-01 07:06:18 : Payfast\Payfast\Controller\Redirect\Index::execute : bof
+2020-09-01 07:06:18 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : serverMode : test
+2020-09-01 07:06:18 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : pfOutput for signature is : merchant_id=10000100&merchant_key=46f0cd694581a&return_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fsuccess%2F&cancel_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fcancel%2F&notify_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fnotify%2F&name_first=Mansi&name_last=Mansi&email_address=mansi%40dasinfomedia.com&m_payment_id=000000012&amount=499.00&item_name=English%2C+Order+%23000000012
+2020-09-01 07:06:19 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : data is :Array
+(
+    [merchant_id] => 10000100
+    [merchant_key] => 46f0cd694581a
+    [return_url] => https://www.mitzuma.co.za/payfast/redirect/success/
+    [cancel_url] => https://www.mitzuma.co.za/payfast/redirect/cancel/
+    [notify_url] => https://www.mitzuma.co.za/payfast/notify/
+    [name_first] => Mansi
+    [name_last] => Mansi
+    [email_address] => mansi@dasinfomedia.com
+    [m_payment_id] => 000000012
+    [amount] => 499.00
+    [item_name] => English, Order #000000012
+    [signature] => 3aa3be7cfd7f5f7585dfb6beaa62ee99
+    [user_agent] => Magento 2.3.5-p1
+)
+
+2020-09-01 08:34:36 : Payfast\Payfast\Controller\Redirect\Index::execute : bof
+2020-09-01 08:34:36 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : serverMode : test
+2020-09-01 08:34:36 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : pfOutput for signature is : merchant_id=10000100&merchant_key=46f0cd694581a&return_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fsuccess%2F&cancel_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fcancel%2F&notify_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fnotify%2F&amount=0.00&item_name=English%2C+Order+%23
+2020-09-01 08:34:37 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : data is :Array
+(
+    [merchant_id] => 10000100
+    [merchant_key] => 46f0cd694581a
+    [return_url] => https://www.mitzuma.co.za/payfast/redirect/success/
+    [cancel_url] => https://www.mitzuma.co.za/payfast/redirect/cancel/
+    [notify_url] => https://www.mitzuma.co.za/payfast/notify/
+    [name_first] => 
+    [name_last] => 
+    [email_address] => 
+    [m_payment_id] => 
+    [amount] => 0.00
+    [item_name] => English, Order #
+    [signature] => 57b2843554c3fb21f3882727d1484ead
+    [user_agent] => Magento 2.3.5-p1
+)
+
+2020-09-03 19:52:59 : Payfast\Payfast\Controller\Redirect\Index::execute : bof
+2020-09-03 19:52:59 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : serverMode : test
+2020-09-03 19:52:59 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : pfOutput for signature is : merchant_id=10000100&merchant_key=46f0cd694581a&return_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fsuccess%2F&cancel_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fredirect%2Fcancel%2F&notify_url=https%3A%2F%2Fwww.mitzuma.co.za%2Fpayfast%2Fnotify%2F&name_first=Muhammed&name_last=Moola&email_address=muhammed%40infinityoutdoors.co.za&m_payment_id=000000014&amount=1311.00&item_name=English%2C+Order+%23000000014
+2020-09-03 19:53:00 : Payfast\Payfast\Model\Payfast::getStandardCheckoutFormFields : data is :Array
+(
+    [merchant_id] => 10000100
+    [merchant_key] => 46f0cd694581a
+    [return_url] => https://www.mitzuma.co.za/payfast/redirect/success/
+    [cancel_url] => https://www.mitzuma.co.za/payfast/redirect/cancel/
+    [notify_url] => https://www.mitzuma.co.za/payfast/notify/
+    [name_first] => Muhammed
+    [name_last] => Moola
+    [email_address] => muhammed@infinityoutdoors.co.za
+    [m_payment_id] => 000000014
+    [amount] => 1311.00
+    [item_name] => English, Order #000000014
+    [signature] => 0e968234defa5a9fa6e0d13da2994a05
+    [user_agent] => Magento 2.3.5-p1
+)
+

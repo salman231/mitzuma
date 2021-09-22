@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="sal" translate="label" sortOrder="10">
+            <label>HomePage Categories</label>
+        </tab>
+        <section id="custom_cats" translate="label" type="text"
+                 sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Select Your Categories</label>
+            <tab>sal</tab>
+            <resource>Sal_CustomCategories::config_module_name</resource>
+            <group id="select_first_cat" translate="label" type="text"
+                   sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Select First Homepage Category</label>
+                <field id="first_cat" translate="label" type="multiselect" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>First Category to be selected</label>
+                    <source_model>Sal\CustomCategories\Model\Config\Source\Categorylist</source_model>
+                </field>
+                <field id="first_no_of_prods" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How many Products you want to show?</label>
+                    <validate>validate-number</validate>
+                </field>
+            </group>
+            <group id="select_second_cat" translate="label" type="text"
+                   sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Select Second Homepage Category</label>
+                <field id="second_cat" translate="label" type="multiselect" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Second Category to be selected</label>
+                    <source_model>Sal\CustomCategories\Model\Config\Source\Categorylist</source_model>
+                </field>
+                <field id="second_no_of_prods" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How many Products you want to show?</label>
+                    <validate>validate-number</validate>
+                </field>
+            </group>
+            <group id="select_third_cat" translate="label" type="text"
+                   sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Select Third Homepage Category</label>
+                <field id="third_cat" translate="label" type="multiselect" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Third Category to be selected</label>
+                    <source_model>Sal\CustomCategories\Model\Config\Source\Categorylist</source_model>
+                </field>
+                <field id="third_no_of_prods" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How many Products you want to show?</label>
+                    <validate>validate-number</validate>
+                </field>
+            </group>
+            <group id="select_fourth_cat" translate="label" type="text"
+                   sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Select Fourth Homepage Category</label>
+                <field id="fourth_cat" translate="label" type="multiselect" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Fourth Category to be selected</label>
+                    <source_model>Sal\CustomCategories\Model\Config\Source\Categorylist</source_model>
+                </field>
+                <field id="fourth_no_of_prods" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How many Products you want to show?</label>
+                    <validate>validate-number</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

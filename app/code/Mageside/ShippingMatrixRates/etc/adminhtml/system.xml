@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Mageside. All rights reserved.
+ * See MS-LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers">
+            <group id="matrixrates" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Mageside Shipping Matrix Rates</label>
+                <group id="hint" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Mageside\ShippingMatrixRates\Block\Adminhtml\System\Config\Fieldset\Hint</frontend_model>
+                </group>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="condition_name" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Shipping Price Calculation Method</label>
+                    <source_model>Mageside\ShippingMatrixRates\Model\Config\Source\Matrixrates</source_model>
+                </field>
+                <field id="include_virtual_price" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Include Virtual Products in Price Calculation</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="use_base_price" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Use Product Price in Base Currency</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="use_tax_price" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Use Product Price incl Tax</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="use_discount" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Use Product Price with Discount</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="csv_delimiter" translate="label comment" type="text" sortOrder="75" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>CSV delimiter</label>
+                </field>
+                <field id="import_export_note" translate="label" type="note" sortOrder="80" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Import/Export</label>
+                    <comment>Import and export are available in website scope. Please select website (left-top corner of page) to proceed.</comment>
+                </field>
+                <field id="export" translate="label" type="Mageside\ShippingMatrixRates\Block\Adminhtml\Form\Field\Export" sortOrder="80" showInDefault="0" showInWebsite="1" showInStore="0">
+                    <label>Export</label>
+                </field>
+                <field id="import" translate="label" type="Mageside\ShippingMatrixRates\Block\Adminhtml\Form\Field\Import" sortOrder="90" showInDefault="0" showInWebsite="1" showInStore="0">
+                    <label>Import</label>
+                    <backend_model>Mageside\ShippingMatrixRates\Model\Config\Backend\Matrixrates</backend_model>
+                    <comment>If you have changed any settings, please Save Config before importing a file.</comment>
+                </field>
+                <field id="handling_type" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Handling Fee Calculation Method</label>
+                    <source_model>Magento\Shipping\Model\Source\HandlingType</source_model>
+                </field>
+                <field id="handling_fee" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Handling Fee</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="zip_from_range" translate="label" type="select" sortOrder="77" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable Ranges for Zip From Column</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Allow using ranges in zip from column like 10000-19999 or W1-W99 (GBR). Be careful with zip codes where dash is a part of zip code.</comment>
+                </field>
+                <field id="zip_code_max_length" translate="label" type="text" sortOrder="115" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>PostCode Max Length</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <comment>Trim long digit zipcodes to this length (set 0 to disable)</comment>
+                </field>
+                <field id="from_filter_operator" translate="label" type="select" sortOrder="116" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>From Filter Operator</label>
+                    <source_model>Mageside\ShippingMatrixRates\Model\Config\Source\FromFilterOperator</source_model>
+                </field>
+                <field id="to_filter_operator" translate="label" type="select" sortOrder="117" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>To Filter Operator</label>
+                    <source_model>Mageside\ShippingMatrixRates\Model\Config\Source\ToFilterOperator</source_model>
+                </field>
+                <field id="specificerrmsg" translate="label" type="textarea" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Displayed Error Message</label>
+                </field>
+                <field id="sallowspecific" translate="label" type="select" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Ship to Applicable Countries</label>
+                    <frontend_class>shipping-applicable-country</frontend_class>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Ship to Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="showmethod" translate="label" type="select" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Show Method if Not Applicable</label>
+                    <frontend_class>shipping-skip-hide</frontend_class>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

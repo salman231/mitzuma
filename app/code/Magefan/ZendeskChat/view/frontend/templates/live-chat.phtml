@@ -1,0 +1,125 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+
+/** @var Magefan\ZendeskChat\Block\LiveChat $block */
+?>
+
+<?php if ($block->enableMobileOptimization()) { ?>
+    <div class="livechat">
+        <div rel="nofollow noopener" onclick="openMobileLiveChat();" >
+            <div class="wrapper">
+                <div class="livechat-icon"></div>
+                <div class="livechat-label">Chat</div>
+            </div>
+        </div>
+    </div>
+    <script data-mfmofile="true">
+        function openMobileLiveChat(){
+            <?php
+                $url = 'https://v2.zopim.com/widget/'
+                    . 'livechat.html?api_calls=%5B%5D&hostname=magefan2.dev.magefan.top&key='
+                    . $block->escapeHtml($block->getKey())
+                    . '&lang=en&';
+            ?>
+            var string = '<?= $block->escapeJs(strrev($url)) ?>';
+            var ret = '', i = 0;
+            for ( i = string.length-1; i >= 0; i-- ){
+                ret += string.charAt(i);
+            }
+            window.open(ret);
+        }
+    </script>
+
+    <style>
+        @media (min-width: 1024px) {
+            .livechat {display: none;}
+        }
+        @media (max-width: 1023px) {
+            .livechat {
+                position: fixed;margin: 0;padding: 0;z-index: 9999999999;left: 10px;bottom: 10px;opacity: 1;
+                border-radius: 3px;background: #26385a;overflow: hidden;border: 2px solid #ffffff;
+            }
+            .livechat .livechat-icon {
+                color: #ffffff;display: block;
+                <?php $backgroundImg = $block->getViewFileUrl('Magefan_ZendeskChat::images/chat.png'); ?>
+                background: url("<?= $block->escapeUrl($backgroundImg) ?>") no-repeat 10px 12px;
+                width: 40px;height: 40px;float: left;
+            }
+            .livechat .livechat-label {
+                background: #324366;color: #ffffff;line-height: 30px;display: inline-block;padding: 5px 15px;
+                font-weight: 600;font-family: Verdana, Geneva, sans-serif;font-size: 14px;
+            }
+        }
+    </style>
+<?php } ?>
+
+<script>
+    window.zESettings = <?= $block->getZESettings() ?>;
+    setTimeout(function(){
+        <?php if ($block->enableMobileOptimization()) { ?>
+        if (parseInt(window.innerWidth) < 1024) return;
+        <?php } ?>
+
+        <?php if ($block->useCustomerData()) { ?>
+        require([
+            'jquery',
+            'jquery/jquery.cookie',
+            'domReady!'
+        ], function ($) {
+            require(['Magento_Customer/js/customer-data'], function(customerData) {
+
+                <?= /*@noEscape*/ $block->getZendeskChatScript() ?>
+
+                function update(data) {
+
+                    if (typeof $zopim === "undefined" || !$zopim.livechat) {
+                        setTimeout(function(){
+                            update(data);
+                        }, 1000);
+                        return;
+                    }
+
+                    if (data.customerName) {
+                        $zopim(function () {
+                            if (!$zopim.livechat.getName()) {
+                                $zopim.livechat.setName(data.customerName);
+                            }
+                        });
+                    }
+                    if (data.customerEmail) {
+                        $zopim(function () {
+                            if (!$zopim.livechat.getEmail()) {
+                                $zopim.livechat.setEmail(data.customerEmail);
+                            }
+                        });
+                    }
+                    if (data.customerPhone) {
+                        $zopim(function () {
+                            if (!$zopim.livechat.getPhone()) {
+                                $zopim.livechat.setPhone(data.customerPhone);
+                            }
+                        });
+                    }
+
+                    
+                    $zopim.livechat.setLanguage('<?= $block->escapeHtml($block->getLocaleCode()) ?>');
+                    zE('webWidget', 'setLocale', '<?= $block->escapeHtml($block->getLocaleCode()) ?>');
+                   
+                }
+
+                var data = customerData.get('mf-zendesk-chat');
+                update(data());
+                data.subscribe(function (updatedData) {
+                    update(updatedData);
+                }, this);
+            });
+        });
+        <?php } else { ?>
+            <?= /*@noEscape*/ $block->getZendeskChatScript() ?>
+        <?php } ?>
+
+    }, <?= $block->escapeHtml($block->getScriptLoadDelay()) ?>);
+</script>

@@ -1,0 +1,17 @@
+{
+    "name": "magefan/module-zendesk-chat",
+    "description": "",
+    "require": {
+        "magefan/module-community" : ">=2.0.14"
+    },
+    "type": "magento2-module",
+    "version": "2.0.2",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magefan\\ZendeskChat\\": ""
+        }
+    }
+}

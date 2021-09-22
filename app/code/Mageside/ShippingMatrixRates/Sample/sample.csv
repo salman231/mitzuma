@@ -1,0 +1,36 @@
+Country,Region/State,City,Zip/Postal Code From,Zip/Postal Code To,Weight From,Weight To,Qty From,Qty To,Price From,Price To,Shipping Group,Customer Group,Advanced Calculations,Shipping Price,Cost,Delivery Method Name,Notes
+CA,*,*,*,*,*,*,*,*,*,*,*,*,,18,,CA all,
+CA,*,*,M0A,M5Z,*,*,*,*,*,*,*,*,,16,,CA in rang M0A-M5Z,"If range, only the first two characters are affected by the search"
+CA,*,*,M6G%,*,*,*,*,*,*,*,*,*,,14,,CA for M6G area,
+CA,*,*,M7G 2__,*,*,*,*,*,*,*,*,*,,12,,CA only for M7G area and local 2,Local delivery units starts with number 2
+CA,*,*,"M6G 2V7,M6G 2V8",*,*,*,*,*,*,*,*,*,,10,,CA only for M6G 2V7 and M6G 2V8,
+GB,*,*,*,*,*,*,*,*,*,*,*,*,,16,,GB all,
+GB,*,*,W,*,*,*,*,*,*,*,*,*,,14,,GB for W,for codes started with W
+GB,*,*,"W8,W9",*,*,*,*,*,*,*,*,*,,12,,GB for W8 and W9,for codes started with W8 or W9
+GB,*,*,W8 7BH,*,*,*,*,*,*,*,*,*,,10,,GB only for W8 7BH,
+GB,*,*,EC%,*,*,*,*,*,*,*,*,*,,12,,GB for EC,for codes started with EC
+AT,*,*,*,*,*,*,*,*,*,*,*,*,,20,,AT all,
+AT,*,*,1060,1070,*,*,*,*,*,*,*,*,,14,,AT in range 1060-1070,
+AT,*,*,1080,*,*,*,*,*,*,*,*,*,,12,,AT for 1080,
+AT,*,*,109_,*,*,*,*,*,*,*,*,*,,13,,AT for codes started with 109,in range 1090-1099
+NL,*,*,*,*,*,*,*,*,*,*,*,*,,20,,NL all,
+NL,*,*,3030,3060,*,*,*,*,*,*,*,*,,18,,NL in range 3030-3060,
+NL,*,*,"3021 JC,3022 JC",*,*,*,*,*,*,*,*,*,,16,,NL for 3021 JC and 3022 JC,
+US,*,*,*,*,*,*,*,*,*,*,*,*,,30,,US all,
+US,*,*,37300,37500,*,*,*,*,*,*,*,*,,25,,US in range 37300-37500,in range 37300-XXXX – 37500-XXXX
+US,*,*,37212,*,*,*,*,*,*,*,*,*,,22,,US for codes started with 37212,
+US,*,*,99577-0727,*,*,*,*,*,*,*,*,*,,18,,US only for 99577-0727,
+US,*,*,"995770728,995770729",*,*,*,*,*,*,*,*,*,,18,,US only for 99577-0728 and 99577-0729,
+US,AK,*,*,*,*,*,*,*,*,*,*,*,,50,,US only for Alaska,
+US,"CA,AZ,NV",*,*,*,*,*,*,*,*,*,*,*,,28,,"US only for California, Arizona, Nevada",
+US,*,*,*,*,10,20,*,*,*,*,*,*,PERCENT(10),10,,10$ + 10%,
+US,*,*,*,*,20,30,*,*,*,*,*,*,FULL_WEIGHT(0.5*2*ceil),10,,10$ + full_weight,adding 2$ for each 0.5lbs
+US,*,*,*,*,30,40,*,*,*,*,*,*,OVER_WEIGHT(0.5*2*ceil),10,,10$ + over_weight,adding 2$ for each 0.5lbs after 30lbs
+US,*,*,*,*,40,50,*,*,*,*,*,*,PERCENT(10);FULL_WEIGHT(0.5*2*ceil);OVER_WEIGHT(0.5*2*ceil);LOWEST_RESULT,10,,10$ + lowest_result,
+US,*,*,*,*,50,60,*,*,*,*,*,*,PERCENT(10);FULL_WEIGHT(0.5*2*ceil);OVER_WEIGHT(0.5*2*ceil);HIGHEST_RESULT,10,,10$ + highest_result,
+US,*,*,*,*,60,70,*,*,*,*,*,*,PERCENT(10);FULL_WEIGHT(0.5*2*ceil);OVER_WEIGHT(0.5*2*ceil);SUM,10,,10$ + sum of results,
+US,*,*,*,*,*,*,70,80,*,*,*,*,PERCENT(9);ROUND(2:up:99),10,,10$ + rounded to up result with ending 99,
+US,*,*,*,*,*,*,80,90,*,*,*,*,PERCENT(1);MIN(100),20,,limitation of minimum result,result must be 100$ or higher
+US,*,*,*,*,*,*,90,100,*,*,*,*,PERCENT(10);MAX(20),50,,limitation of maximum result,result must be 20$ or less
+US,*,*,*,*,*,*,100,110,*,*,*,*,OVER_ITEM(1*5),10,,10$ + over_item,adding 5$ for each item after 100 qty
+US,*,*,*,*,*,*,110,120,*,*,*,*,EXTRA(15),10,,10$ + extra 15$,

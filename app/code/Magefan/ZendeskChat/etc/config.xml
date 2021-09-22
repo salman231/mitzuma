@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mfzendeskchat>
+            <general>
+                <enabled>0</enabled>
+                <mfmodule>ZendeskChat</mfmodule>
+                <use_customer_data>0</use_customer_data>
+            </general>
+            <page_speed_optimization>
+                <script_load_delay>5</script_load_delay>
+                <enable_mobile_optimization>1</enable_mobile_optimization>
+            </page_speed_optimization>
+        </mfzendeskchat>
+    </default>
+</config>

@@ -1,0 +1,26 @@
+{
+    "name": "vaimo/module-pargo-custom-shipping",
+    "type": "magento2-module",
+    "description": "This Magento 2 module allows you to provide a click and collect solution provided by Pargo",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Imtiyaaz Salie",
+            "email": "imtiyaaz.salie@pargo.co.za"
+        }
+    ],
+    "require": {
+        "magento/framework": "^100|^101"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Pargo\\CustomShipping\\": ""
+        }
+    },
+    "extra": {
+        "vaimo-module-category": "Payment method"
+    }
+}

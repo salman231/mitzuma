@@ -1,0 +1,24 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Customer\Block\Form\Login\Info $block */
+?>
+<?php if ($block->getRegistration()->isAllowed()) : ?>
+<div class="block block-new-customer">
+    <div class="block-title">
+        <strong id="block-new-customer-heading" role="heading" aria-level="2"><?= $block->escapeHtml(__('New here?')) ?></strong>
+    </div>
+    <div class="block-content" aria-labelledby="block-new-customer-heading">
+        <p><?= $block->escapeHtml(__('Registration is free and easy!')) ?></p>
+        <p class="adv-text"><strong><?= $block->escapeHtml(__('✓')) ?></strong><?= $block->escapeHtml(__(' Faster Checkout')) ?><br><strong><?= $block->escapeHtml(__('✓')) ?></strong><?= $block->escapeHtml(__(' Save multiple shipping addresses.')) ?><br><strong><?= $block->escapeHtml(__('✓')) ?></strong><?= $block->escapeHtml(__(' View and track orders and more.')) ?></p>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <a href="<?= $block->escapeUrl($block->getCreateAccountUrl()) ?>" class="action create primary"><span><?= $block->escapeHtml(__('Register')) ?></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

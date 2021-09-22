@@ -1,0 +1,10 @@
+[2020-09-08 10:55:14] - Ozow\Ozow\Controller\Redirect\Index::execute :  bof
+[2020-09-08 10:55:14] - Ozow\Ozow\Controller\AbstractOzow::_initCheckout : bof
+[2020-09-08 10:55:14] - inf-mit-001	za0.00magento-v2.3https://www.mitzuma.co.za/ozow/redirect/cancel/?form_key=mzcauvqpsdvpwo0bhttps://www.mitzuma.co.za/ozow/redirect/success/?form_key=mzcauvqpsdvpwo0bhttps://www.mitzuma.co.za/ozow/notify/false9beab938b5ee49e3b4cd97b45dc41e35
+[2020-09-08 10:55:14] - 46ff585e3c4c74a6068a8fe47101e09991ac5ad4273046ba7268538c06180663cd03da6e65df1e6535f404525296d842b568d0714a2c7fe68fef688d68032a45
+[2020-09-21 15:50:48] - Ozow\Ozow\Controller\Redirect\Index::execute :  bof
+[2020-09-21 15:50:48] - Ozow\Ozow\Controller\AbstractOzow::_initCheckout : bof
+[2020-09-21 15:50:48] - Ozow\Ozow\Controller\AbstractOzow::_initCheckout : eof
+[2020-09-21 15:50:48] - Ozow\Ozow\Controller\Redirect\Index::execute :  eof
+[2020-09-21 15:50:48] - inf-mit-001	zazar500.00000000033000000033magento-v2.3muhammed moolahttps://www.mitzuma.co.za/ozow/redirect/cancel/?form_key=uasftbumv6wwopkchttps://www.mitzuma.co.za/ozow/redirect/success/?form_key=uasftbumv6wwopkchttps://www.mitzuma.co.za/ozow/notify/false9beab938b5ee49e3b4cd97b45dc41e35
+[2020-09-21 15:50:48] - be557f784f31556efd8e425523ef1978500d6ef3aaa3d56ace6f6e11f09f39ab4b7fe5f2433d8646e72585d121c2e64961650b1d9417017a7c57a231d5ff0c33

@@ -1,0 +1,42 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Vault\Block\Customer\CreditCards $block */
+$tokens = $block->getPaymentTokens();
+?>
+<div class="account-wrapper">
+    <div class="account-heading">
+        <h2><?= $block->escapeHtml(__('Payment Information')) ?></h2>
+        <div class="account-description"><?= $block->escapeHtml(__("Manage and store all your credit card information here. Don't stress, it's secure and it'll save you heaps of time every time you place an order")) ?></h2></div>
+    </div>
+    <div class="account-content">
+        <div class="block-title"><strong><?= $block->escapeHtml(__('Saved Cards')) ?></strong></div>
+        <?php if (count($tokens) !== 0) : ?>
+        <div class="table-wrapper my-credit-cards">
+            <table class="data table table-credit-cards" id="my-orders-table">
+                <thead>
+                <tr>
+                    <th scope="col" class="col card-number"><?= $block->escapeHtml(__('Card Number')) ?></th>
+                    <th scope="col" class="col expire"><?= $block->escapeHtml(__('Expiration Date')) ?></th>
+                    <th scope="col" class="col card-type"><?= $block->escapeHtml(__('Type')) ?></th>
+                    <th scope="col" class="col actions">&nbsp;</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                foreach ($tokens as $token) {
+                    echo $block->renderTokenHtml($token);
+                }
+                ?>
+                </tbody>
+            </table>
+        </div>
+
+        <?php elseif (!$block->isExistsCustomerTokens()) : ?>
+            <div class="account-empty"><?= $block->escapeHtml(__('You have no saved cards.')) ?></div>
+        <?php endif ?>
+    </div>
+</div>

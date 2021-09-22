@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Create an Online Profile</title>
+    </head>
+    <body>
+        <referenceContainer name="customer.login.container">
+            <!-- customer.form.login.extra -->
+            <container name="customer.login.left" htmlTag="div" htmlClass="login-left" before="-"/>
+            <container name="customer.register.right" htmlTag="div" htmlClass="register-right" after="-"/>
+        </referenceContainer>
+        <move element="customer_form_login" destination="customer.login.left" before="-"/>
+        <move element="customer.new" destination="customer.register.right" before="-"/>
+    </body>
+</page>
