@@ -59,6 +59,7 @@ atlassian*
 /pub/media/captcha/*
 /pub/static/*
 !/pub/static/.htaccess
+porto2_3.2.4.zip
 
 /var/*
 !/var/.htaccess
